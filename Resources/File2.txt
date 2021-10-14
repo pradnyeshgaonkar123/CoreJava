@@ -1,0 +1,5 @@
+java is good 
+this is line from file one because this file contains word 'java'
+this is line from file one because this file contains word 'java'
+this is line from file one because this file contains word 'java'
+this is line from file one because this file contains word 'java'
