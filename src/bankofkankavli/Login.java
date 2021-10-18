@@ -1,4 +1,4 @@
-package com.bankofkankavli;
+package bankofkankavli;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
