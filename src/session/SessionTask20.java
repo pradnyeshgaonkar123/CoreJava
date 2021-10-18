@@ -1,8 +1,12 @@
 package session;
 
 import java.util.Scanner;
+import java.io.Console;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalTime;
+import java.util.Scanner;
+
 
 public class SessionTask20 {
 	public static void main(String[] args) {
@@ -12,9 +16,8 @@ public class SessionTask20 {
 	}
 }
 
-class BankingMenu {
+class BankingMenu extends Banking{
 	public void showInitialMenu() {
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.println("----------------");
 		System.out.println("BANK OF KANKAVLI");
@@ -67,7 +70,6 @@ class BankingMenu {
 		System.out.println("5. Log out.");
 
 		System.out.println("\nEnter your choice : ");
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		userInformation user = new userInformation();
 		Payee payee = new Payee();
@@ -123,10 +125,6 @@ class BankingMenu {
 
 class MyException extends Exception {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	String msg;
 
 	public MyException(String msg) {
@@ -141,18 +139,17 @@ class MyException extends Exception {
 }
 
 class Registration {
-	static String name;
-	static String address;
-	static String contact_number;
-	static String username;
-	static String password;
-	static int balance;
-	static String current_time;
-	static String current_day;
-	static public int initial_balance;
+	 String name;
+	 String address;
+	 String contact_number;
+	 String username;
+	 String password;
+	 int balance;
+	 String current_time;
+	 String current_day;
+	 public int initial_balance;
 
 	public void register() {
-		@SuppressWarnings("resource")
 		Scanner obj = new Scanner(System.in);
 		System.out.print("\nEnter name : ");
 		name = obj.nextLine();
@@ -193,7 +190,6 @@ class Registration {
 		boolean flag = false;
 		try {
 
-			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
 			String pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
 			if (password.matches(pattern)) {
@@ -231,7 +227,6 @@ class Registration {
 			}
 			else {
 			do {
-				@SuppressWarnings("resource")
 				Scanner sc = new Scanner(System.in);
 				System.out.print("\nEnter username : ");
 				String userName = sc.nextLine();
@@ -257,7 +252,6 @@ class Registration {
 	}
 
 	public void update() {
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter new name : ");
 		name = sc.nextLine();
@@ -287,19 +281,23 @@ class userInformation extends Registration {
 }
 
 class Banking extends userInformation {
-	static int deposit;
-	static int[] depositArray = new int[50];
-	static String formatDateTime;
-	static String time;
-	static String[] formatDateTimeArray = new String[5];
-	static String[] timeArray = new String[5];
-	static int[] balanceArray = new int[20];
-	static int transaction_counter = 0;
-	static String[] transaction_history = new String[50];
-	static int count = -1;
-
+	 int deposit;
+	 int[] depositArray = new int[50];
+	 String formatDateTime;
+	 String time;
+	 String[] formatDateTimeArray = new String[5];
+	 String[] timeArray = new String[5];
+	 int[] balanceArray = new int[20];
+	 int transaction_counter = 0;
+	 static String[] transaction_history = new String[50];
+	 static int count = -1;
+	 String payeename;
+	 boolean user_exists = false;
+	 int debit_transaction_counter = 0;
+	 int amount_to_payee;
+	 int[] amount_to_payeeArray = new int[20];
+	 int remaining_amount;
 	public void deposit() {
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter amount");
 		deposit = sc.nextInt();
@@ -338,12 +336,11 @@ class Banking extends userInformation {
 }
 
 class Payee extends Banking {
-	static String payeename;
-	static boolean user_exists = false;
-	static int debit_transaction_counter = 0;
+//	static String payeename;
+//	static boolean user_exists = false;
+//	static int debit_transaction_counter = 0;
 
 	public boolean payeeInfo() {
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter payee username : ");
 		payeename = sc.nextLine();
@@ -351,12 +348,11 @@ class Payee extends Banking {
 		return true;
 	}
 
-	static int amount_to_payee;
-	static int[] amount_to_payeeArray = new int[20];
-	static int remaining_amount;
+//	static int amount_to_payee;
+//	static int[] amount_to_payeeArray = new int[20];
+//	static int remaining_amount;
 
 	public void transfer() {
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter amount : ");
 		amount_to_payee = sc.nextInt();

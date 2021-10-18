@@ -1,7 +1,8 @@
 package session;
 
 
-public class SessionTask7_ {
+
+public class SessionTask7 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
