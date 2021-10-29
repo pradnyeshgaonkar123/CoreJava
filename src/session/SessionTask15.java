@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SessionTask15 {
 	public static String[] copied_email_address;
-	public static void main(String[]  email_address)throws IOException {
+	public static void main(String[]  email_address) throws IOException{
 		@SuppressWarnings({ "unused", "resource" })
 		Scanner sc = new Scanner(System.in);
 		File file1 = new File("Resources/emails.txt");

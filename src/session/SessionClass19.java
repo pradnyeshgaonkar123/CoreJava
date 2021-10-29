@@ -2,7 +2,7 @@ package session;
 
 import java.util.*;
 import java.io.*;
-public class SessionTask19 {
+public class SessionClass19 {
 
 	public static void main(String[] args) throws IOException {
 		final String VALID_EMAIL_ADDRESS_REGEX = "^[A-Za-z0-9+_.-]+@(.+)$";

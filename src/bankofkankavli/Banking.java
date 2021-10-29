@@ -10,7 +10,7 @@ public class Banking extends Login {
 	Account ac;
 	Banking bank;
 	List<String> a;
-
+	
 	Scanner sc = new Scanner(System.in);
 	Login l = new Login();
 
